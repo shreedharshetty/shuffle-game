@@ -1,0 +1,49 @@
+.container{
+	width:960px;
+	margin:auto;
+	font:14px arial,helvetica,sans-serif;
+}
+.selection{
+	margin:20px;
+	text-align: center;
+}
+#demo_puzzle {
+	margin:0 auto;
+	background:#e3e3e3;
+	border-radius:10px;
+	width:600px;
+	
+}
+#demo_puzzle ul {
+	list-style:none;
+	margin:0 0 10px 0;
+	padding:0;
+	float:left;
+}
+#demo_puzzle li {
+	padding:6px 1em 6px 0;
+	float:left;
+	min-width:80px;
+}
+#demo_puzzle p {
+	margin-left:90px;
+	padding:10px;
+}
+#demo_puzzle p.button {
+	float:left;
+	margin:10px;
+	color: #000;
+}
+#demo_puzzle p.button a {
+	padding:10px;
+}
+#demo_puzzle p.button a:hover {
+	color:#69c;
+	background: #fff;
+}
+#demo_puzzle p {
+	clear:both;
+}
+label{
+	font-weight: bold;
+}

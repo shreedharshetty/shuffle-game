@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<title>Puzzle Game Demo</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="selection">
+				<h1>
+					Flipkart test
+				</h1>
+				<label for="selectLevel">Please select the level : </label>
+				<select name="selectLevel" id="difficulty">
+					<option value="0">--select level--</option>
+					<option value="3">Easy</option>
+					<option value="4">Medium</option>
+					<option value="5">Hard</option>
+				</select>
+			</div>
+			<div id="demo_puzzle">
+
+			</div>
+		</div>	
+		<script src="js/script.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var demo_puzzle;
+			//add a event to the select box, to select the difficulty level
+			window.addEventListener('load', function () {
+				document.getElementById('difficulty').onchange = function(){
+					if(parseInt(this.value) != 0){
+						demo_puzzle = new Puz('demo_puzzle', {
+							'board_w': parseInt(this.value),
+							'board_h': parseInt(this.value),
+						});
+						demo_puzzle.init();
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
